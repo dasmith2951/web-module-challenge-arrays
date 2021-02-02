@@ -157,7 +157,7 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(array, removeFlavor){
+function removeFlavorByName(array, removeFlavor) {
 
     const index = array.indexOf(removeFlavor);
 
