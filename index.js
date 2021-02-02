@@ -45,11 +45,13 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
-}    
+function copy(originalFlavors) {
 
+    const copiedArray = originalFlavors.slice();
 
+    return copiedArray;
+
+}
 
 
 
@@ -64,8 +66,17 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(originalFlavors) {
+
+   if (originalFlavors.length == 31) {
+
+       return true;
+
+   } else {
+
+       return false;
+
+   }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,8 +92,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(originalFlavors) {
+
+   originalFlavors.unshift("Rainbow Sherbert");
+
+   return originalFlavors;
+
 }
 
 
@@ -97,8 +112,12 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(originalFlavors) {
+
+   originalFlavors.splice(-1,1);
+
+   return (originalFlavors);
+
 }
 
 
@@ -107,15 +126,17 @@ function removeLastFlavor(/*your code here*/){
 Write a function that returns a flavor at a given index in the array.
 
 Use the getFlavorByIndex function below to do the following:
-    1. Recieve an array
+    1. Receive an array
     2. Receive a number (the desired index)
     3. Return the flavor located at the received index position
 
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(originalFlavors, index) {
+
+    return originalFlavors [index];
+
 }
 
 
@@ -134,8 +155,14 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(originalFlavors, removeFlavor){
+
+    const index = originalFlavors.indexOf(removeFlavor);
+
+    originalFlavors.splice(index,1);
+
+    return originalFlavors;
+
 }
 
 
